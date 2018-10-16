@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "test", schema = "test", catalog = "")
+@Table(name = "test")
 public class Note {
 
     @Id
@@ -28,7 +28,6 @@ public class Note {
         this.date = new Date();
         this.done = false;
     }
-
 
     public long getId() {
         return id;

@@ -16,10 +16,9 @@ public class NoteServiceImpl implements NoteService {
         this.repositoryDAO = repositoryDAO;
     }
 
-
     @Override
     public Note getNoteById(Long id) {
-        return repositoryDAO.findOne(id);
+        return repositoryDAO.findNoteById(id);
     }
 
     @Override
@@ -29,7 +28,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public void updateNote(Long id, String message, boolean done) {
-        Note updated = repositoryDAO.findOne(id);
+        Note updated = repositoryDAO.findNoteById(id);
         updated.setDone(done);
         updated.setMessage(message);
         repositoryDAO.save(updated);
@@ -37,7 +36,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public void deleteNote(Long id) {
-        repositoryDAO.delete(id);
+        repositoryDAO.deleteNoteById(id);
     }
 
     @Override
