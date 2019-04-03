@@ -11,7 +11,8 @@ public class Bell {
     public Bell() {
     }
 
-    public Bell(Date date) {
+    public Bell(Long id, Date date) {
+        this.id = id;
         this.date = date;
     }
 
