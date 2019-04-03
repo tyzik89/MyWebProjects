@@ -13,17 +13,6 @@ public class BellRepositoryListImpl implements BellRepository {
 
     private List<Bell> bellList = new ArrayList<Bell>();
 
-    public BellRepositoryListImpl() {
-        Bell bell = new Bell();
-        bell.setId(new Long(1));
-        bell.setDate(new Date());
-        bellList.add(bell);
-        bell = new Bell();
-        bell.setId(new Long(2));
-        bell.setDate(new Date());
-        bellList.add(bell);
-    }
-
     @Override
     public void save(Bell bell) {
         bellList.add(bell);

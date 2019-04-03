@@ -15,8 +15,9 @@ public class BellServiceImpl implements BellService {
     private BellRepository bellRepository;
 
     @Override
-    public void save(Bell bell) {
+    public Bell save(Bell bell) {
         bellRepository.save(bell);
+        return bell;
     }
 
     @Override
@@ -30,7 +31,7 @@ public class BellServiceImpl implements BellService {
     }
 
     @Override
-    public Bell getById(Long id) {
+    public Bell findById(Long id) {
         return bellRepository.getById(id);
     }
 }

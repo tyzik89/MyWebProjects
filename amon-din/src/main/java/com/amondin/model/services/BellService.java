@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface BellService {
 
-    void save(Bell bell);
+    Bell save(Bell bell);
 
     void delete(Bell bell);
 
     List<Bell> getAll();
 
-    Bell getById(Long id);
+    Bell findById(Long id);
 }
