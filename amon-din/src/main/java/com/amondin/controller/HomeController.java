@@ -17,7 +17,7 @@ public class HomeController {
         return "home";
     }
 
-    /* ДЛЯ ТЕСТА - ОТОБРАЖЕНИЯ НА СТРАНИЧКЕ
+    /*// ДЛЯ ТЕСТА - ОТОБРАЖЕНИЯ НА СТРАНИЧКЕ
     @RequestMapping(value = "bells", method = RequestMethod.GET)
     public String getListBells(Model model) {
         List<Bell> bellList = bellService.getAll();

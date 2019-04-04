@@ -9,23 +9,24 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class BellController {
+@RequestMapping("/bells")
+public class BellRestController {
 
     @Autowired
     BellService bellService;
 
-    @GetMapping("/bells")
+    @GetMapping
     public List<Bell> findAllBells() {
         return bellService.getAll();
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/bells")
+    @PostMapping
     public Bell newBell(@RequestBody Bell newBell) {
         return bellService.save(newBell);
     }
 
-    @GetMapping("/bells/{id}")
+    @GetMapping("/{id}")
     public Bell findBellById(@PathVariable Long id) {
         return bellService.findById(id);
     }
