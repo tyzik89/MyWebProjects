@@ -21,12 +21,12 @@ public class BellServiceImpl implements BellService {
     }
 
     @Override
-    public void delete(Bell bell) {
-
+    public Bell delete(Bell bell) {
+        return bell;
     }
 
     @Override
-    public List<Bell> getAll() {
+    public Iterable<Bell> getAll() {
         return bellRepository.getAll();
     }
 

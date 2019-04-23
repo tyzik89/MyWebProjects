@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface BellRepository {
 
-    void save(Bell bell);
+    Bell save(Bell bell);
 
-    void delete(Bell bell);
+    Bell delete(Bell bell);
 
-    List<Bell> getAll();
+    Iterable<Bell> getAll();
 
     Bell getById(Long id);
 }

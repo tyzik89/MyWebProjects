@@ -1,9 +1,13 @@
 package com.amondin.model.entities;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 
 public class Bell {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private Date date;
 

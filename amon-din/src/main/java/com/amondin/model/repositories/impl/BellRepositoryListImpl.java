@@ -5,7 +5,6 @@ import com.amondin.model.repositories.BellRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -14,13 +13,15 @@ public class BellRepositoryListImpl implements BellRepository {
     private List<Bell> bellList = new ArrayList<Bell>();
 
     @Override
-    public void save(Bell bell) {
+    public Bell save(Bell bell) {
         bellList.add(bell);
+        return bell;
     }
 
     @Override
-    public void delete(Bell bell) {
+    public Bell delete(Bell bell) {
         bellList.remove(bell);
+        return bell;
     }
 
     @Override
