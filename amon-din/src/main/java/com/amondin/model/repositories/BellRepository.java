@@ -8,7 +8,7 @@ public interface BellRepository {
 
     Bell save(Bell bell);
 
-    Bell delete(Bell bell);
+    boolean delete(Long id);
 
     Iterable<Bell> getAll();
 

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class BellServiceImpl implements BellService {
 
     @Autowired
-    @Qualifier("jdbc_repository")
+    @Qualifier("jdbs_repository")
     private BellRepository bellRepository;
 
     @Override
@@ -21,8 +21,8 @@ public class BellServiceImpl implements BellService {
     }
 
     @Override
-    public Bell delete(Bell bell) {
-        return bell;
+    public boolean delete(Long id) {
+        return bellRepository.delete(id);
     }
 
     @Override

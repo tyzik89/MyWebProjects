@@ -26,6 +26,16 @@ public class BellRepositoryJDBCImpl implements BellRepository {
     }
 
     @Override
+    public Iterable<Bell> getAll() {
+        return jdbc.query("select id, creation_date from Bells", this::mapRowToBell);
+    }
+
+    @Override
+    public Bell getById(Long id) {
+        return jdbc.queryForObject("select id, creation_date from Bells where id = ?", this::mapRowToBell, id);
+    }
+
+    @Override
     public Bell save(Bell bell) {
         jdbc.update(
                 "insert into Bells (id, creation_date) values (?, ?)",
@@ -36,22 +46,9 @@ public class BellRepositoryJDBCImpl implements BellRepository {
     }
 
     @Override
-    public Bell delete(Bell bell) {
-        jdbc.update(
-                "delete from Bells where id = ? and creation_date = ?",
-                bell.getId(),
-                bell.getCreationDate()
-        );
-        return null;
-    }
-
-    @Override
-    public Iterable<Bell> getAll() {
-        return jdbc.query("select id, creation_date from Bells", this::mapRowToBell);
-    }
-
-    @Override
-    public Bell getById(Long id) {
-        return jdbc.queryForObject("select id, creation_date from Bells where id = ?", this::mapRowToBell, id);
+    public boolean delete(Long id) {
+        return (jdbc.update(
+                "delete from Bells where id = ?",
+                id) == 1);
     }
 }

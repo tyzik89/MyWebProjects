@@ -21,9 +21,14 @@ public class BellRepositoryListImpl implements BellRepository {
     }
 
     @Override
-    public Bell delete(Bell bell) {
-        bellList.remove(bell);
-        return bell;
+    public boolean delete(Long id) {
+        for (Bell bell : bellList) {
+            if (bell.getId() == id) {
+                bellList.remove(bell);
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
