@@ -1,23 +1,26 @@
 package com.amondin.model.entities;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Bell {
 
-    @Id
-    @GeneratedValue
     private Long id;
-    private Date date;
+    private LocalDateTime creationDate;
 
-    //Пустой конструктор нужен для работы с JSON
     public Bell() {
     }
 
-    public Bell(Long id, Date date) {
+    public Bell(Long id, LocalDateTime creationDate) {
         this.id = id;
-        this.date = date;
+        this.creationDate = creationDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Bell{" +
+                "id=" + id +
+                ", creationDate=" + creationDate +
+                '}';
     }
 
     @Override
@@ -28,22 +31,14 @@ public class Bell {
         Bell bell = (Bell) o;
 
         if (!id.equals(bell.id)) return false;
-        return date.equals(bell.date);
+        return creationDate.equals(bell.creationDate);
     }
 
     @Override
     public int hashCode() {
         int result = id.hashCode();
-        result = 31 * result + date.hashCode();
+        result = 31 * result + creationDate.hashCode();
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Bell{" +
-                "id=" + id +
-                ", date=" + date +
-                '}';
     }
 
     public Long getId() {
@@ -54,11 +49,11 @@ public class Bell {
         this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public LocalDateTime getCreationDate() {
+        return creationDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setCreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
     }
 }

@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS Bells (
+    id INTEGER PRIMARY KEY,
+    creation_date TIMESTAMP NOT NULL
+);

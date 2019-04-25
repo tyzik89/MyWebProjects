@@ -2,12 +2,14 @@ package com.amondin.model.repositories.impl;
 
 import com.amondin.model.entities.Bell;
 import com.amondin.model.repositories.BellRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
+@Qualifier("list_repository")
 public class BellRepositoryListImpl implements BellRepository {
 
     private List<Bell> bellList = new ArrayList<Bell>();
