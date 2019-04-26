@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class BellServiceImpl implements BellService {
 
     @Autowired
-    @Qualifier("jdbs_repository")
+    @Qualifier("jdbc_repository")
     private BellRepository bellRepository;
 
     @Override
