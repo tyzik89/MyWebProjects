@@ -16,13 +16,13 @@ public class AmonDinApplication {
 		SpringApplication.run(AmonDinApplication.class, args);
 	}
 
-	 //Добавление тестовых звонков
+	/* //Добавление тестовых звонков
 	@Bean
 	CommandLineRunner initList(BellService bellService) {
 		return args -> {
 			bellService.save(new Bell(1L, LocalDateTime.now().minusHours(5).minusMinutes(30)));
 			bellService.save(new Bell(2L, LocalDateTime.now()));
 		};
-	}
+	}*/
 
 }
