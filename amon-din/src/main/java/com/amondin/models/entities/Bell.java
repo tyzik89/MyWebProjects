@@ -1,4 +1,4 @@
-package com.amondin.model.entities;
+package com.amondin.models.entities;
 
 import java.time.LocalDateTime;
 
@@ -30,8 +30,7 @@ public class Bell {
 
         Bell bell = (Bell) o;
 
-        if (!id.equals(bell.id)) return false;
-        return creationDate.equals(bell.creationDate);
+        return id.equals(bell.id) && creationDate.equals(bell.creationDate);
     }
 
     @Override

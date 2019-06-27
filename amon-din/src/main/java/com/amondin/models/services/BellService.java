@@ -1,6 +1,6 @@
-package com.amondin.model.services;
+package com.amondin.models.services;
 
-import com.amondin.model.entities.Bell;
+import com.amondin.models.entities.Bell;
 
 public interface BellService {
 

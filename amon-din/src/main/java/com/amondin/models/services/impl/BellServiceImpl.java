@@ -1,8 +1,8 @@
-package com.amondin.model.services.impl;
+package com.amondin.models.services.impl;
 
-import com.amondin.model.entities.Bell;
-import com.amondin.model.repositories.BellRepository;
-import com.amondin.model.services.BellService;
+import com.amondin.models.entities.Bell;
+import com.amondin.models.repositories.BellRepository;
+import com.amondin.models.services.BellService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

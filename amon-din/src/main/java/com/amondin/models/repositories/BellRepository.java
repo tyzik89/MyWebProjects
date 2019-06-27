@@ -1,8 +1,6 @@
-package com.amondin.model.repositories;
+package com.amondin.models.repositories;
 
-import com.amondin.model.entities.Bell;
-
-import java.util.List;
+import com.amondin.models.entities.Bell;
 
 public interface BellRepository {
 

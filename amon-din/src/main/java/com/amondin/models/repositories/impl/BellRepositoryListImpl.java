@@ -1,7 +1,7 @@
-package com.amondin.model.repositories.impl;
+package com.amondin.models.repositories.impl;
 
-import com.amondin.model.entities.Bell;
-import com.amondin.model.repositories.BellRepository;
+import com.amondin.models.entities.Bell;
+import com.amondin.models.repositories.BellRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 

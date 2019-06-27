@@ -1,19 +1,17 @@
-package com.amondin.model.repositories.impl;
+package com.amondin.models.repositories.impl;
 
-import com.amondin.model.entities.Bell;
-import com.amondin.model.repositories.BellRepository;
+import com.amondin.models.entities.Bell;
+import com.amondin.models.repositories.BellRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
-import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.time.LocalDateTime;
-import java.util.Arrays;
 
 @Repository
 @Qualifier("jdbc_repository")
