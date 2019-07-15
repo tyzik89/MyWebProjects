@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 public class User implements UserDetails {
@@ -20,12 +22,13 @@ public class User implements UserDetails {
 
     private final String username;
     private String password;
-    private String fullname;
+    private List<Bell> bells;
 
-    public User(String username, String password, String fullname) {
+
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.fullname = fullname;
+        bells = new ArrayList<>();
     }
 
     @Override
@@ -40,7 +43,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return null;
+        return username;
     }
 
     @Override
@@ -63,11 +66,11 @@ public class User implements UserDetails {
         return true;
     }
 
-    public String getFullname() {
-        return fullname;
+    public List<Bell> getBells() {
+        return bells;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setBells(List<Bell> bells) {
+        this.bells = bells;
     }
 }
