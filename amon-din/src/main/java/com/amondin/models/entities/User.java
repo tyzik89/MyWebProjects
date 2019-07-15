@@ -22,13 +22,13 @@ public class User implements UserDetails {
 
     private final String username;
     private String password;
-    private List<Bell> bells;
+    //private List<Bell> bells;
 
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-        bells = new ArrayList<>();
+       // bells = new ArrayList<>();
     }
 
     @Override
@@ -66,11 +66,11 @@ public class User implements UserDetails {
         return true;
     }
 
-    public List<Bell> getBells() {
+    /*public List<Bell> getBells() {
         return bells;
     }
 
     public void setBells(List<Bell> bells) {
         this.bells = bells;
-    }
+    }*/
 }
